@@ -4,25 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            margin: 0;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 <body>
     <div>MOTOS JOHAN </div>
     <button id="startButton">Start</button>
+    <div id="canvasContainer"></div> <!-- Añadir contenedor para el canvas -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
 <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
@@ -34,7 +20,7 @@ let classifier;
 let label = 'listening...';
 
 // Teachable Machine model URL:
-let soundModel = "https://stunning-couscous-v6qw9jjwpjw42xvqr-3002.app.github.dev/my_model";
+let soundModel = "https://stunning-couscous-v6qw9jjwpjw42xvqr-3002.app.github.dev/my_model/";
 
 function preload() {
   // Load the model
